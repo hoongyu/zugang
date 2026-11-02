@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zugang: German master's admission self-check</title>
+  <meta name="description" content="Free offline self-check for international applicants to German master's programmes, in English and Simplified Chinese.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#profile" data-i18n="skip">Skip to the form</a>
+  <header class="site">
+    <div class="wrap header-row">
+      <div>
+        <h1 data-i18n="app.title">Zugang</h1>
+        <p class="tagline" data-i18n="app.tagline"></p>
+        <p class="privacy" data-i18n="app.privacy"></p>
+      </div>
+      <button type="button" id="lang-toggle" class="lang-toggle no-print"></button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <noscript><p class="notice">Zugang needs JavaScript. Run it with <code>python3 -m http.server 8000</code> and open http://localhost:8000/.</p></noscript>
+
+    <form id="form" novalidate>
+      <section id="profile" aria-labelledby="s1-title" tabindex="-1">
+        <h2 id="s1-title" data-i18n="s1.title"></h2>
+        <p data-i18n="s1.intro"></p>
+        <div class="row example-row no-print">
+          <div class="field">
+            <label for="persona" data-i18n="f.example"></label>
+            <select id="persona"></select>
+          </div>
+          <button type="button" id="load-persona" class="secondary" data-i18n="btn.loadExample"></button>
+        </div>
+
+        <fieldset>
+          <legend data-i18n="fs.degree"></legend>
+          <div class="grid">
+            <div class="field">
+              <label for="country" data-i18n="f.country"></label>
+              <select id="country" name="country"></select>
+            </div>
+            <div class="field">
+              <label for="years" data-i18n="f.years"></label>
+              <input id="years" name="years" type="number" inputmode="decimal" min="1" max="8" step="0.5">
+            </div>
+            <div class="field">
+              <label for="totalCredits" data-i18n="f.totalCredits"></label>
+              <input id="totalCredits" name="totalCredits" type="number" inputmode="decimal" min="1" step="any">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend data-i18n="fs.grade"></legend>
+          <div class="grid">
+            <div class="field">
+              <label for="nMax" data-i18n="f.nMax"></label>
+              <input id="nMax" name="nMax" type="number" inputmode="decimal" step="any">
+            </div>
+            <div class="field">
+              <label for="nMin" data-i18n="f.nMin"></label>
+              <input id="nMin" name="nMin" type="number" inputmode="decimal" step="any">
+            </div>
+            <div class="field">
+              <label for="nD" data-i18n="f.nD"></label>
+              <input id="nD" name="nD" type="number" inputmode="decimal" step="any">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend data-i18n="fs.areas"></legend>
+          <div id="area-rows" class="pairs"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend data-i18n="fs.lang"></legend>
+          <p class="hint" id="score-hint" data-i18n="f.score.hint"></p>
+          <div id="lang-rows" class="pairs"></div>
+        </fieldset>
+      </section>
+
+      <section id="programme-section" aria-labelledby="s2-title">
+        <h2 id="s2-title" data-i18n="s2.title"></h2>
+        <p data-i18n="s2.intro"></p>
+        <div class="field">
+          <label for="programme" data-i18n="f.programme"></label>
+          <select id="programme" name="programme"></select>
+        </div>
+
+        <fieldset id="custom" hidden>
+          <legend data-i18n="fs.custom"></legend>
+          <p class="hint" data-i18n="f.custom.hint"></p>
+          <div class="grid">
+            <div class="field">
+              <label for="minGrade" data-i18n="f.minGrade"></label>
+              <input id="minGrade" type="number" inputmode="decimal" min="1" max="4" step="0.1">
+            </div>
+            <div class="field">
+              <label for="minTotalEcts" data-i18n="f.minTotalEcts"></label>
+              <input id="minTotalEcts" type="number" inputmode="numeric" min="0" step="1">
+            </div>
+          </div>
+          <div id="req-rows" class="pairs"></div>
+          <div class="grid">
+            <div class="field">
+              <label for="reqTest" data-i18n="f.reqTest"></label>
+              <select id="reqTest"></select>
+            </div>
+            <div class="field">
+              <label for="reqMin" data-i18n="f.reqMin"></label>
+              <input id="reqMin" type="text" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="route" data-i18n="f.route"></label>
+              <select id="route"></select>
+            </div>
+            <div class="field">
+              <label for="deadline" data-i18n="f.deadline"></label>
+              <input id="deadline" type="date">
+            </div>
+          </div>
+          <div class="check-field">
+            <input id="aps" type="checkbox" checked>
+            <label for="aps" data-i18n="f.aps"></label>
+          </div>
+        </fieldset>
+
+        <div class="field narrow">
+          <label for="count" data-i18n="f.count"></label>
+          <input id="count" type="number" inputmode="numeric" min="1" max="20" step="1" value="1">
+        </div>
+
+        <button type="submit" class="primary no-print" data-i18n="btn.check"></button>
+      </section>
+    </form>
+
+    <section id="results" aria-labelledby="s3-title">
+      <h2 id="s3-title" tabindex="-1" data-i18n="s3.title"></h2>
+      <p id="live" class="summary" role="status" aria-live="polite" aria-atomic="true"></p>
+      <div id="results-body"><p data-i18n="results.empty"></p></div>
+      <div class="actions no-print" id="actions" hidden>
+        <button type="button" id="print" class="secondary" data-i18n="btn.print"></button>
+        <button type="button" id="download" class="secondary" data-i18n="btn.md"></button>
+      </div>
+    </section>
+
+    <section id="glossary" aria-labelledby="s4-title">
+      <h2 id="s4-title" data-i18n="s4.title"></h2>
+      <p data-i18n="s4.intro"></p>
+      <div class="field narrow no-print">
+        <label for="g-filter" data-i18n="g.filter"></label>
+        <input id="g-filter" type="search" autocomplete="off" aria-describedby="g-count">
+      </div>
+      <p id="g-count" class="hint" aria-live="polite"></p>
+      <div class="table-wrap" tabindex="0" role="region" aria-labelledby="s4-title">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="g.de"></th>
+              <th scope="col" data-i18n="g.en"></th>
+              <th scope="col" data-i18n="g.zh"></th>
+              <th scope="col" data-i18n="g.explain"></th>
+            </tr>
+          </thead>
+          <tbody id="g-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="sources" aria-labelledby="src-title">
+      <h2 id="src-title" data-i18n="footer.sources"></h2>
+      <ul id="rule-list" class="rule-list"></ul>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <p data-i18n="footer.disclaimer"></p>
+    </div>
+  </footer>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
