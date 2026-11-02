@@ -109,7 +109,7 @@ WebFetch failed for every source host with `getaddrinfo ENOTFOUND`: the host is 
 | ECTS Users' Guide 2015 | official URL not found (no search possible) | `ects-year` stays partial, `source: null` with a note |
 | Official APS sites (China, India, Vietnam) | URLs not verified | not linked; the app links only the TUM APS page for fees (`aps-fees`, false) |
 
-Glossary entries: 7 cite a source and are flagged `partial` (same blocked pages, or the ECTS rule); the other 20 have no source and are flagged `false`.
+Glossary entries (counted with `node -e` over `data/glossary.json`): 27 terms; 4 cite a source URL (the blocked TUM and uni-assist pages) and are flagged `partial`; 1 more (Leistungspunkte) is `partial` because it rests on the `ects-year` rule, which has no verified URL; the other 22 are flagged `false`.
 
 To fix: allow `www.tum.de`, `www.uni-hamburg.de`, `www.uni-marburg.de`, `uni-assist.de` (and `ec.europa.eu` or the ECTS guide's host) in the environment's network settings, or re-check the pages by hand, then set the flags in `data/rules.json` (and the matching `verified` values in `js/checklist.js` and `data/glossary.json`; `tests/data.test.js` checks that the checklist mirrors the rules).
 
