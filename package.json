@@ -1,0 +1,12 @@
+{
+  "name": "zugang",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Free offline self-check for international applicants to German master's programmes.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test",
+    "start": "python3 -m http.server 8000"
+  }
+}
