@@ -411,7 +411,7 @@ function renderGlossary() {
   $('g-body').innerHTML = terms.map((g) => {
     const ex = state.lang === 'zh' ? g.explain_zh : g.explain_en;
     const exLang = state.lang === 'zh' ? 'zh-Hans' : 'en';
-    const src = g.source ? ` <a href="${esc(g.source)}" rel="noopener noreferrer">${H('lbl.source')}</a>` : '';
+    const src = g.source ? ` <a href="${esc(g.source)}" rel="noopener noreferrer" aria-label="${esc(`${T('lbl.source')}: ${g.de}`)}">${H('lbl.source')}</a>` : '';
     return `<tr><td data-label="${esc(lbl.de)}" lang="de"><strong>${esc(g.de)}</strong></td>
       <td data-label="${esc(lbl.en)}" lang="en">${esc(g.en)}</td>
       <td data-label="${esc(lbl.zh)}" lang="zh-Hans">${esc(g.zh)}</td>
