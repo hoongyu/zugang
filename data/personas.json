@@ -1,0 +1,104 @@
+{
+  "note": "Invented example applicants. Not real people.",
+  "personas": [
+    {
+      "id": "lin",
+      "example": true,
+      "name": "Lin",
+      "label_en": "Lin (example): China, 100-point scale",
+      "label_zh": "Lin（示例）：中国，百分制",
+      "programme": "ds",
+      "country": "CN",
+      "degree": {
+        "years": 4,
+        "totalCredits": 160
+      },
+      "grade": {
+        "nMax": 100,
+        "nMin": 60,
+        "nD": 85
+      },
+      "groups": [
+        {
+          "area": "mathematics",
+          "credits": 20
+        },
+        {
+          "area": "computer science",
+          "credits": 70
+        }
+      ],
+      "languages": [
+        {
+          "test": "IELTS",
+          "score": 6.5
+        }
+      ]
+    },
+    {
+      "id": "priya",
+      "example": true,
+      "name": "Priya",
+      "label_en": "Priya (example): India, 10-point CGPA",
+      "label_zh": "Priya（示例）：印度，10 分制 CGPA",
+      "programme": "ds",
+      "country": "IN",
+      "degree": {
+        "years": 4,
+        "totalCredits": 180
+      },
+      "grade": {
+        "nMax": 10,
+        "nMin": 5,
+        "nD": 8.0
+      },
+      "groups": [
+        {
+          "area": "mathematics",
+          "credits": 30
+        },
+        {
+          "area": "computer science",
+          "credits": 60
+        }
+      ],
+      "languages": [
+        {
+          "test": "TOEFL iBT",
+          "score": 95
+        }
+      ]
+    },
+    {
+      "id": "minh",
+      "example": true,
+      "name": "Minh",
+      "label_en": "Minh (example): Vietnam, 10-point scale",
+      "label_zh": "Minh（示例）：越南，10 分制",
+      "programme": "me",
+      "country": "VN",
+      "degree": {
+        "years": 4,
+        "totalCredits": 150
+      },
+      "grade": {
+        "nMax": 10,
+        "nMin": 5,
+        "nD": 7.5
+      },
+      "groups": [
+        {
+          "area": "engineering",
+          "credits": 90
+        }
+      ],
+      "languages": [
+        {
+          "test": "CEFR",
+          "lang": "de",
+          "level": "B2"
+        }
+      ]
+    }
+  ]
+}

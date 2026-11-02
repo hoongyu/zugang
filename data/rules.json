@@ -1,0 +1,85 @@
+{
+  "as_of": "2026-11-02",
+  "note": "verified: true = re-checked against the source; partial = only partly verified or could not be re-checked; false = no official source found, shown as such in the app. See docs/build-log.md.",
+  "rules": [
+    {
+      "id": "grade-formula",
+      "text_en": "Modified Bavarian formula: N = 1 + 3 × (Nmax − Nd) / (Nmax − Nmin), with Nmax the best grade, Nmin the lowest passing grade and Nd your grade. Universities describe the result as orientation only. University pages say uni-assist generally uses it, but not where the ZAB has other rules.",
+      "text_zh": "修正巴伐利亚公式（modifizierte bayerische Formel）：N = 1 + 3 × (Nmax − Nd) / (Nmax − Nmin)，其中 Nmax 为最高分，Nmin 为最低及格分，Nd 为你的成绩。各大学称结果仅供参考。大学网页说明 uni-assist 一般使用该公式，但 ZAB 另有规定时除外。",
+      "source": "https://www.tum.de/studium/bewerbung/infoportal-bewerbung/bayerische-formel",
+      "sources_extra": [
+        "https://www.uni-hamburg.de/campuscenter/bewerbung/international/studium-mit-abschluss/anerkennung-auslaendischer-schulbildung/notenumrechner.html"
+      ],
+      "verified": "partial",
+      "checked_note": "Checked by the owner on 2026-11-02 (appendix A of docs/cloud-task.md). Re-check in the build session failed: the host was blocked by the network policy, so the flag was downgraded from true to partial."
+    },
+    {
+      "id": "grade-two-pass",
+      "text_en": "The formula does not apply to grading scales with only two passing grades (as stated by one university, Philipps-Universität Marburg).",
+      "text_zh": "该公式不适用于只有两个及格等级的评分体系（这是一所大学——马尔堡大学——的说法）。",
+      "source": "https://www.uni-marburg.de/de/fb02/studium/pruefungsbuero/anerkennungen/notenumrechnung-grade-conversion",
+      "verified": "partial",
+      "checked_note": "Checked by the owner on 2026-11-02 (appendix A of docs/cloud-task.md). Re-check in the build session failed: the host was blocked by the network policy, so the flag was downgraded from true to partial."
+    },
+    {
+      "id": "grade-rounding",
+      "text_en": "No official rule was found on whether the converted grade is cut or rounded after one decimal. Zugang shows both values.",
+      "text_zh": "未找到关于换算成绩保留一位小数时应截断还是四舍五入的官方规定。Zugang 同时显示两种结果。",
+      "source": null,
+      "verified": false,
+      "checked_note": "No source exists; shown as an open question."
+    },
+    {
+      "id": "aps-countries",
+      "text_en": "An APS certificate (Akademische Prüfstelle) is required for a master's application when the qualifying degree was obtained in China, Vietnam or India.",
+      "text_zh": "若取得申请硕士所需学位的国家为中国、越南或印度，申请硕士时需要 APS 证书（Akademische Prüfstelle，留德人员审核部）。",
+      "source": "https://www.tum.de/en/studies/application/aps",
+      "verified": "partial",
+      "checked_note": "Checked by the owner on 2026-11-02 (appendix A of docs/cloud-task.md). Re-check in the build session failed: the host was blocked by the network policy, so the flag was downgraded from true to partial. Some third-party sources add Mongolia; that is unverified and not part of the rule."
+    },
+    {
+      "id": "aps-fees",
+      "text_en": "APS fees differ between sources, so Zugang shows no amount. Check the fee on the official APS website for your country (linked from the TUM APS page).",
+      "text_zh": "不同来源的 APS 费用说法不一，因此 Zugang 不显示金额。请在你所在国家的 APS 官方网站上查询（可从慕尼黑工业大学的 APS 页面找到链接）。",
+      "source": "https://www.tum.de/en/studies/application/aps",
+      "verified": false,
+      "checked_note": "Sources conflict (for China, third parties quote RMB 2,500). The official APS site URLs could not be verified in the build session, so only the TUM page is linked."
+    },
+    {
+      "id": "ua-fee",
+      "text_en": "uni-assist handling fee (Bearbeitungsentgelt): EUR 75 for the first chosen programme, EUR 30 for each additional one in the same application semester. The fees cover processing, whatever the result of the evaluation.",
+      "text_zh": "uni-assist 处理费（Bearbeitungsentgelt）：同一申请学期第一个专业 75 欧元，每增加一个专业 30 欧元。无论审核结果如何，费用都用于处理申请，不予退还。",
+      "source": "https://uni-assist.de/en/how-to-apply/pay-all-fees/handling-fees",
+      "sources_extra": [
+        "https://uni-assist.de/en/faqs/pay-all-fees/"
+      ],
+      "verified": "partial",
+      "checked_note": "Checked by the owner on 2026-11-02 (appendix A of docs/cloud-task.md). Re-check in the build session failed: the host was blocked by the network policy, so the flag was downgraded from true to partial."
+    },
+    {
+      "id": "ua-timing",
+      "text_en": "uni-assist: submit and pay at least 8 weeks before the deadline. Processing takes 4 to 6 weeks from receipt of the online application; applications are handled in order of arrival.",
+      "text_zh": "uni-assist：至少在截止日期前 8 周提交材料并付款。自收到在线申请起，处理需要 4 至 6 周；按到达顺序处理。",
+      "source": "https://uni-assist.de/en/how-to-apply/plan-your-application/deadlines-processing-time",
+      "verified": "partial",
+      "checked_note": "Checked by the owner on 2026-11-02 (appendix A of docs/cloud-task.md). Re-check in the build session failed: the host was blocked by the network policy, so the flag was downgraded from true to partial."
+    },
+    {
+      "id": "ects-year",
+      "text_en": "60 ECTS credits (Leistungspunkte) correspond to one year of full-time study; one credit corresponds to 25 to 30 hours of work (ECTS Users' Guide 2015, European Commission).",
+      "text_zh": "60 个 ECTS 学分（Leistungspunkte）相当于一年全日制学习；1 个学分相当于 25 至 30 小时的学习量（欧盟委员会《ECTS 用户指南》2015）。",
+      "source": null,
+      "source_note": "ECTS Users' Guide 2015 (European Commission). The official URL could not be found and verified in the build session.",
+      "verified": "partial",
+      "checked_note": "Status partial until the official URL is verified (appendix A)."
+    },
+    {
+      "id": "ects-estimate",
+      "text_en": "Converting foreign credits proportionally (years × 60 / total credits) is Zugang's estimate, not an official rule. Universities may convert by workload or by their own method.",
+      "text_zh": "按比例换算外国学分（学年数 × 60 / 总学分）是 Zugang 的估算，不是官方规则。大学可能按学习量或自己的方法换算。",
+      "source": null,
+      "verified": false,
+      "checked_note": "Our own estimate; labelled as such."
+    }
+  ]
+}

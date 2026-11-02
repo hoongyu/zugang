@@ -1,0 +1,104 @@
+{
+  "note": "Invented example programmes at an invented university. Not real programmes.",
+  "programmes": [
+    {
+      "id": "ds",
+      "example": true,
+      "university": "Example University",
+      "name_en": "M.Sc. Data Science (example)",
+      "name_zh": "数据科学硕士（示例）",
+      "teaching": "en",
+      "minGrade": 2.5,
+      "minTotalEcts": 180,
+      "areas": [
+        {
+          "areas": [
+            "mathematics"
+          ],
+          "ects": 36
+        },
+        {
+          "areas": [
+            "computer science"
+          ],
+          "ects": 60
+        }
+      ],
+      "language": {
+        "anyOf": [
+          {
+            "test": "IELTS",
+            "min": 6.5
+          },
+          {
+            "test": "TOEFL iBT",
+            "min": 88
+          }
+        ]
+      },
+      "route": "uni-assist",
+      "deadline": "2027-07-15",
+      "aps": true
+    },
+    {
+      "id": "me",
+      "example": true,
+      "university": "Example University",
+      "name_en": "M.Sc. Mechanical Engineering (example, German-taught)",
+      "name_zh": "机械工程硕士（示例，德语授课）",
+      "teaching": "de",
+      "minGrade": 2.7,
+      "areas": [],
+      "language": {
+        "anyOf": [
+          {
+            "test": "DSH",
+            "min": 2
+          },
+          {
+            "test": "TestDaF",
+            "min": 4
+          }
+        ]
+      },
+      "route": "direct",
+      "deadline": "2027-05-31",
+      "aps": true
+    },
+    {
+      "id": "econ",
+      "example": true,
+      "university": "Example University",
+      "name_en": "M.Sc. Economics (example)",
+      "name_zh": "经济学硕士（示例）",
+      "teaching": "en",
+      "minGrade": 2.3,
+      "areas": [
+        {
+          "areas": [
+            "economics"
+          ],
+          "ects": 30
+        },
+        {
+          "areas": [
+            "mathematics",
+            "statistics"
+          ],
+          "ects": 15
+        }
+      ],
+      "language": {
+        "anyOf": [
+          {
+            "test": "IELTS",
+            "min": 7.0
+          }
+        ]
+      },
+      "route": "uni-assist",
+      "deadline": "2027-01-15",
+      "aps": true
+    }
+  ]
+}

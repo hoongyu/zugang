@@ -1,0 +1,248 @@
+{
+  "note": "Plain explanations. verified:false means no official source was checked for this explanation.",
+  "terms": [
+    {
+      "de": "Zulassung",
+      "en": "admission",
+      "zh": "录取",
+      "explain_en": "The university's decision that you may study in a programme.",
+      "explain_zh": "大学决定你可以就读某个专业。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "Zulassungsvoraussetzungen",
+      "en": "admission requirements",
+      "zh": "入学要求",
+      "explain_en": "The conditions you must meet to be admitted, such as a minimum grade, credits in certain subjects and a language certificate.",
+      "explain_zh": "被录取必须满足的条件，例如最低成绩、特定科目的学分和语言证书。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "Bewerbungsfrist",
+      "en": "application deadline",
+      "zh": "申请截止日期",
+      "explain_en": "The last day on which your application must reach the university or uni-assist.",
+      "explain_zh": "申请材料必须送达大学或 uni-assist 的最后一天。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "Vorprüfungsdokumentation (VPD)",
+      "en": "preliminary review documentation",
+      "zh": "预审文件（VPD）",
+      "explain_en": "A document from uni-assist that records how your foreign qualification and grade were evaluated; some universities ask you to upload it with a direct application.",
+      "explain_zh": "uni-assist 出具的文件，记录你的外国学历和成绩的评估结果；有些大学要求直接申请时上传。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "Akademische Prüfstelle (APS)",
+      "en": "Academic Evaluation Centre",
+      "zh": "留德人员审核部（APS）",
+      "explain_en": "Office that checks degrees from China, India and Vietnam and issues the APS certificate needed before a master's application.",
+      "explain_zh": "审核来自中国、印度和越南的学历并签发 APS 证书的机构，申请硕士前需要该证书。",
+      "source": "https://www.tum.de/en/studies/application/aps",
+      "verified": "partial"
+    },
+    {
+      "de": "beglaubigte Kopie",
+      "en": "certified copy",
+      "zh": "经认证的复印件",
+      "explain_en": "A copy of a document that an authorised office has stamped and signed to confirm it matches the original.",
+      "explain_zh": "由授权机构盖章签字、确认与原件一致的复印件。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "Modulhandbuch",
+      "en": "module handbook",
+      "zh": "课程手册（模块手册）",
+      "explain_en": "A list of the courses in a degree with their content, workload and credits; universities use it to check subject-area credits.",
+      "explain_zh": "列出学位所含课程及其内容、学习量和学分的文件；大学用它核查各学科领域的学分。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "Leistungspunkte (LP)",
+      "en": "credit points (ECTS)",
+      "zh": "学分（ECTS）",
+      "explain_en": "Credits that measure workload; 60 ECTS correspond to one year of full-time study.",
+      "explain_zh": "衡量学习量的学分；60 个 ECTS 学分相当于一年全日制学习。",
+      "source": null,
+      "verified": "partial"
+    },
+    {
+      "de": "Notenumrechnung",
+      "en": "grade conversion",
+      "zh": "成绩换算",
+      "explain_en": "Converting a foreign grade to the German scale from 1.0 (best) to 4.0 (lowest pass), usually with the modified Bavarian formula.",
+      "explain_zh": "把外国成绩换算成德国的 1.0（最好）到 4.0（最低及格）分制，通常使用修正巴伐利亚公式。",
+      "source": "https://www.tum.de/studium/bewerbung/infoportal-bewerbung/bayerische-formel",
+      "verified": "partial"
+    },
+    {
+      "de": "Auflage",
+      "en": "condition of admission",
+      "zh": "录取附加条件",
+      "explain_en": "A condition attached to an admission, for example passing extra courses within a set time.",
+      "explain_zh": "附加在录取上的条件，例如在规定时间内通过补修课程。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "Zulassungsbescheid",
+      "en": "letter of admission",
+      "zh": "录取通知书",
+      "explain_en": "The official letter that tells you that you have been admitted.",
+      "explain_zh": "正式通知你已被录取的信函。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "Immatrikulation",
+      "en": "enrolment",
+      "zh": "注册入学",
+      "explain_en": "Registering as a student after admission; only then are you officially a student.",
+      "explain_zh": "录取后注册成为学生；完成后才正式成为学生。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "Semesterbeitrag",
+      "en": "semester contribution",
+      "zh": "学期费",
+      "explain_en": "A fee students pay every semester, for example for student services; it is not tuition.",
+      "explain_zh": "学生每学期缴纳的费用，例如用于学生服务；它不是学费。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "zulassungsfrei",
+      "en": "open admission",
+      "zh": "无名额限制",
+      "explain_en": "A programme without a limited number of places: applicants who meet the requirements are admitted.",
+      "explain_zh": "没有名额限制的专业：满足要求的申请人都会被录取。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "zulassungsbeschränkt",
+      "en": "restricted admission",
+      "zh": "有名额限制",
+      "explain_en": "A programme with a limited number of places, so applicants are ranked and not everyone who qualifies is admitted.",
+      "explain_zh": "名额有限的专业，申请人会被排名，并非所有合格者都能被录取。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "Numerus clausus (NC)",
+      "en": "numerus clausus",
+      "zh": "录取限制（NC）",
+      "explain_en": "A limit on places; informally also the grade of the last applicant admitted in an earlier round.",
+      "explain_zh": "名额限制；口语中也指往年最后一名被录取者的成绩。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "Sprachnachweis",
+      "en": "proof of language proficiency",
+      "zh": "语言能力证明",
+      "explain_en": "A certificate showing that your German or English is good enough for the programme.",
+      "explain_zh": "证明你的德语或英语水平足以就读该专业的证书。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "DSH (Deutsche Sprachprüfung für den Hochschulzugang)",
+      "en": "German language exam for university admission",
+      "zh": "德国高校入学德语考试（DSH）",
+      "explain_en": "A German exam taken at universities, with results DSH-1 to DSH-3; many programmes ask for DSH-2.",
+      "explain_zh": "在大学举行的德语考试，成绩分为 DSH-1 至 DSH-3；很多专业要求 DSH-2。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "TestDaF (Test Deutsch als Fremdsprache)",
+      "en": "Test of German as a Foreign Language",
+      "zh": "德福考试（TestDaF）",
+      "explain_en": "A standardised German test with four parts (reading, listening, writing, speaking), each graded TDN 3 to TDN 5.",
+      "explain_zh": "标准化德语考试，分阅读、听力、写作、口语四部分，每部分成绩为 TDN 3 至 TDN 5。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "Motivationsschreiben",
+      "en": "letter of motivation",
+      "zh": "动机信",
+      "explain_en": "A letter explaining why you want to study the programme and why you are a good fit.",
+      "explain_zh": "说明你为什么想读这个专业、为什么适合的信。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "Lebenslauf",
+      "en": "curriculum vitae (CV)",
+      "zh": "简历",
+      "explain_en": "A short, usually tabular overview of your education and experience.",
+      "explain_zh": "简短的、通常为表格形式的教育和经历概述。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "Wintersemester",
+      "en": "winter semester",
+      "zh": "冬季学期",
+      "explain_en": "The semester that starts in autumn, usually in October.",
+      "explain_zh": "秋季开始的学期，通常从十月开始。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "Sommersemester",
+      "en": "summer semester",
+      "zh": "夏季学期",
+      "explain_en": "The semester that starts in spring, usually in April.",
+      "explain_zh": "春季开始的学期，通常从四月开始。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "Anerkennung",
+      "en": "recognition",
+      "zh": "认可（学历/学分认定）",
+      "explain_en": "Official acceptance of a foreign qualification or of credits earned elsewhere.",
+      "explain_zh": "对外国学历或在其他地方取得的学分的正式认可。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "Hochschulzugangsberechtigung (HZB)",
+      "en": "university entrance qualification",
+      "zh": "高校入学资格（HZB）",
+      "explain_en": "The school-leaving qualification that allows you to study at a German university; relevant for bachelor's admission.",
+      "explain_zh": "允许你在德国大学学习的中学毕业资格；与本科录取相关。",
+      "source": null,
+      "verified": false
+    },
+    {
+      "de": "uni-assist",
+      "en": "uni-assist (application service)",
+      "zh": "uni-assist（国际学生申请服务处）",
+      "explain_en": "A service that checks international applications for many German universities and charges a handling fee.",
+      "explain_zh": "为许多德国大学审核国际学生申请并收取处理费的服务机构。",
+      "source": "https://uni-assist.de/en/how-to-apply/pay-all-fees/handling-fees",
+      "verified": "partial"
+    },
+    {
+      "de": "Bearbeitungsentgelt",
+      "en": "handling fee",
+      "zh": "处理费",
+      "explain_en": "The fee uni-assist charges for processing an application, whatever the result.",
+      "explain_zh": "uni-assist 处理申请所收的费用，与结果无关。",
+      "source": "https://uni-assist.de/en/how-to-apply/pay-all-fees/handling-fees",
+      "verified": "partial"
+    }
+  ]
+}
