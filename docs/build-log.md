@@ -9,6 +9,7 @@ The MVP is built and pushed to branch `mvp`. Nothing was pushed to `main`, nothi
 - `node --test`: **39 tests, 39 pass, 0 fail, duration_ms 202.48** (see "Tests").
 - The page runs from `python3 -m http.server 8000`; Lin's example shows the numbers of design section 8 (checked in headless Chromium, see "Browser check").
 - **All source websites were blocked** in this session (see "Blocked URLs"), so no fact could be re-checked. Following hard rule 5, every fact the owner had marked `true` is stored as `partial`. Re-check them before submitting.
+- **Re-checked afterwards**: the owner's local session re-checked every source on 2026-11-02 and updated the data, the texts and the screenshots. 7 of 9 facts are now `true`, 1 `partial`, 1 `false` (Zugang's own estimate). See "Local re-check (2026-11-02, after the cloud session)".
 
 ## What was done, task by task (one commit each)
 
@@ -27,7 +28,7 @@ The MVP is built and pushed to branch `mvp`. Nothing was pushed to `main`, nothi
 Implementation decisions worth reviewing:
 
 - **APS is not one of the "met / not met" requirement rows.** It appears in the document checklist, the timeline ("start now") and the fees. Reason: the task's expected results ("Lin: ECTS gap in mathematics, everything else met"; "Priya: all requirements met, APS still to obtain") treat APS as a procedural step, not an eligibility criterion.
-- **Grade against minimum**: met if both the cut and the rounded value meet the minimum, not met if neither does, otherwise `unknown` ("no official rounding rule", source `grade-rounding`).
+- **Grade against minimum**: met if both the cut and the rounded value meet the minimum, not met if neither does, otherwise `unknown` ("no rounding rule for degrees", source `grade-rounding`).
 - **Total ECTS of the degree** is computed as years × 60 (rule `ects-year`).
 - **Example programmes without a stated minimum total ECTS** (Mechanical Engineering, Economics) show `unknown` / "ask the admissions office" for that row, as design section 7 requires, instead of an invented number.
 - **Invented values not given in the task**: Priya's subject credits (mathematics 30, computer science 60), Minh's total credits (150) and engineering credits (90). Chosen so the expected results of the task come out; all are synthetic.
@@ -115,15 +116,43 @@ To fix: allow `www.tum.de`, `www.uni-hamburg.de`, `www.uni-marburg.de`, `uni-ass
 
 ## What failed or is incomplete
 
-- No source could be re-checked (above). Nothing in the app is shown as "verified".
+- No source could be re-checked (above). Nothing in the app is shown as "verified". Fixed afterwards, see "Local re-check".
 - The first Playwright accessibility run timed out waiting for a visible `<option>`; fixed in the script (`state: 'attached'`). Not an app bug.
 - No real screen-reader test and no native-speaker review of the Chinese text.
 - No video (needs the owner).
 
+## Local re-check (2026-11-02, after the cloud session)
+
+Run by the owner's local Claude Code session on the owner's Windows 11 laptop, where the source sites are reachable. Each page was fetched again (old URLs that now redirect or return 404 were replaced) and every statement in `data/rules.json` was compared with the page text.
+
+| Rule | Page checked | Finding | Flag |
+|---|---|---|---|
+| `grade-formula` | TUM; KMK agreement "Vereinbarung über die Festsetzung der Gesamtnote bei ausländischen Hochschulzugangszeugnissen" (15.03.1991, version of 12.09.2013), annex; Universität Hamburg | Formula as stated. TUM ("unverbindlich", "erste Orientierung") and Hamburg ("zur Orientierung") call the result orientation only. The sentence that uni-assist generally uses the formula was not found on any page and was removed. | partial → true |
+| `grade-two-pass` | Universität Marburg | Listed under "Ausnahmen". The Chinese text was reworded without dashes. | partial → true |
+| `grade-rounding` | KMK agreement, § 3 (1) | School-leaving certificates: the grade is determined to one decimal and not rounded. No rule was found for degrees, so the app still shows both values, and a result that depends on rounding stays "unclear: ask". The KMK PDF is now this rule's source. | false → partial |
+| `aps-countries` | TUM APS page (the old URL redirects) | As stated. Added: documents from Hong Kong, Macao and Taiwan need no APS certificate. | partial → true |
+| `aps-fees` | TUM APS page | The page gives no amount and refers to the responsible APS office. That replaces "fees differ between sources"; the office links TUM gives (China, Vietnam, India) are in `sources_extra`. Still no amount shown. | false → true |
+| `ua-fee` | uni-assist pay-and-submit page (the old handling-fees URL redirects there); terms and conditions | EUR 75 and EUR 30 as stated. "Whatever the result" was replaced: fees are paid in advance and processing starts only once they have arrived (§ 15); refunds only for overpayment, fees the university pays, or withdrawal before the evaluation result (§ 14). The old FAQ link returns 404 and was removed. | partial → true |
+| `ua-timing` | uni-assist standard-procedure page (the old deadlines page returns 404) | "Apply as early as possible, ideally at least 8 weeks before the deadline"; processing "generally" 4 to 6 weeks after the online form. "Submit and pay at least 8 weeks" was softened to match, and "handled in order of arrival", which the page does not say, was removed. | partial → true |
+| `ects-year` | European Commission ECTS page | "60 ECTS credits are the equivalent of a full year of study or work." "25 to 30 hours per credit" (ECTS Users' Guide 2015) was dropped, because the guide itself was not re-checked. | partial → true |
+| `ects-estimate` | none | Zugang's own estimate, unchanged. | false |
+
+Result: 7 of 9 rules `true`, 1 `partial`, 1 `false`. Glossary: the 5 of 27 entries with a source (Akademische Prüfstelle, Leistungspunkte, Notenumrechnung, uni-assist, Bearbeitungsentgelt) are now `true`; the explanations of Leistungspunkte, uni-assist and Bearbeitungsentgelt were reworded to match their pages ("whatever the result" removed). The other 22 stay `false`.
+
+Other changes in the same commit:
+
+- `js/i18n.js`: the rounding note, the uni-assist timeline item, the fee comparison, the APS fee line, the grade warning about other rules (the ZAB example removed, no source for it) and the ECTS rule wording now match the re-checked rules.
+- `js/checklist.js`: the APS and uni-assist documents mirror the new flags.
+- `js/app.js`: the "Sources and verification status" list also links each rule's `sources_extra`.
+- `grade-formula` keeps the TUM page as its main source and lists the KMK PDF under `sources_extra`, so the grade card shows two different links (TUM for the formula, KMK for rounding).
+- `tests/data.test.js`: the test that required `grade-rounding` and `aps-fees` to be `false` now checks that `ects-estimate` is `false`, that `grade-rounding` is not `true`, and that the APS fee text contains no amount. One test name in `tests/check.test.js` was updated.
+- `node --test --test-reporter=tap` (Node v24.15.0): 39 tests, 39 pass, 0 fail.
+- Screenshots in `docs/img/` retaken from the served page with headless Microsoft Edge, driven over the DevTools protocol (1280 px wide, `?example=lin`; phone view 390 × 844 CSS px at device scale 2). No page errors, and no requests to any host other than the local server. `form-en.png` previously showed part of the glossary; it now shows the filled-in form.
+
 ## Owner's checklist
 
 1. Review the app locally: `git fetch origin mvp && git checkout mvp`, `python3 -m http.server 8000`, open http://localhost:8000/?example=lin ; run `node --test`.
-2. Re-check the sources in "Blocked URLs" and update the flags (or allow the hosts and ask a session to do it). Find the official ECTS Users' Guide URL. Proofread the Chinese text.
+2. Sources: re-checked by the local session (see "Local re-check"). Still open: proofread the Chinese text.
 3. Merge `mvp` into `main` yourself if you are happy with it.
 4. Make the repository public when ready.
 5. Deploy: GitHub Pages from the repository root (steps in `README.md`), and keep the link live until at least 2026-11-22.

@@ -31,10 +31,11 @@ test('all appendix A facts are present', () => {
     'grade-rounding', 'grade-two-pass', 'ua-fee', 'ua-timing']);
 });
 
-test('rules that sources contradict or lack are not marked verified', () => {
-  for (const id of ['grade-rounding', 'aps-fees', 'ects-estimate']) {
-    assert.equal(rules.find((r) => r.id === id).verified, false, id);
-  }
+test('open questions and estimates are not marked verified; no APS amount is shown', () => {
+  assert.equal(rules.find((r) => r.id === 'ects-estimate').verified, false);
+  assert.notEqual(rules.find((r) => r.id === 'grade-rounding').verified, true);
+  const aps = rules.find((r) => r.id === 'aps-fees');
+  assert.doesNotMatch(`${aps.text_en} ${aps.text_zh}`, /\d/);
 });
 
 test('rule-backed documents mirror the rule flags', () => {

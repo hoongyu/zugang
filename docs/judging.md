@@ -13,7 +13,7 @@ Each criterion is scored 1 to 5. Below: what Zugang does for it and where to che
 ## Learning Value
 
 - Every result card shows the rule in one sentence, the calculation step by step, the source link with its verification status, and the next step. Code: `js/app.js` (`render`), strings in `js/i18n.js`.
-- The grade card shows the formula with the applicant's numbers filled in (`js/grade.js`, `steps`), plus exact, cut and rounded values, because no official rounding rule exists.
+- The grade card shows the formula with the applicant's numbers filled in (`js/grade.js`, `steps`), plus exact, cut and rounded values, because no rounding rule for degrees was found (the KMK rule that cuts covers school-leaving certificates only).
 - The ECTS card shows the per-credit factor and each area's calculation (`js/ects.js`), labelled as an estimate.
 - The glossary teaches 27 German admission terms in DE, EN and ZH with plain explanations (`data/glossary.json`, section 4 of the page, `docs/img/glossary.png`).
 - German terms stay next to translations ("Bewerbungsfrist", "Modulhandbuch"), so users can read the official pages afterwards.
@@ -31,5 +31,5 @@ Each criterion is scored 1 to 5. Below: what Zugang does for it and where to che
 - Runs with `python3 -m http.server 8000`; `?example=lin` opens straight on Lin's results.
 - `node --test`: 39 tests, 39 passing, no dependencies (`docs/build-log.md` has the command output).
 - Pure functions with small interfaces (`js/grade.js`, `js/ects.js`, `js/check.js`, `js/checklist.js`, `js/timeline.js`, `js/fees.js`), data in `data/*.json`.
-- Honest about uncertainty: every fact in `data/rules.json` has a verification flag; unknown requirements show "ask the admissions office"; limitations listed in `README.md`.
+- Honest about uncertainty: every fact in `data/rules.json` has a verification flag, and every source was re-checked on 2026-11-02 (7 of 9 facts verified, 1 partly verified, 1 is Zugang's own estimate; `docs/build-log.md`, "Local re-check"); unknown requirements show "ask the admissions office"; limitations listed in `README.md`.
 - Design written before the code: `docs/superpowers/specs/2026-11-02-zugang-design.md`.

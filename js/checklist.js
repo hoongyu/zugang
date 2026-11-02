@@ -17,10 +17,10 @@ export function documents(profile, programme) {
   list.push({ id: 'language', de: 'Sprachnachweis', label: 'doc.language', why: 'doc.language.why', source: null, verified: false });
   list.push({ id: 'cv', de: 'Lebenslauf', label: 'doc.cv', why: 'doc.cv.why', source: null, verified: false });
   if (apsNeeded(profile, programme)) {
-    list.push({ id: 'aps', de: 'APS-Zertifikat (Akademische Prüfstelle)', label: 'doc.aps', why: 'doc.aps.why', source: 'aps-countries', verified: 'partial' });
+    list.push({ id: 'aps', de: 'APS-Zertifikat (Akademische Prüfstelle)', label: 'doc.aps', why: 'doc.aps.why', source: 'aps-countries', verified: true });
   }
   if (programme.route === 'uni-assist') {
-    list.push({ id: 'uni-assist', de: 'uni-assist-Bewerbung und Bearbeitungsentgelt', label: 'doc.uniAssist', why: 'doc.uniAssist.why', source: 'ua-fee', verified: 'partial' });
+    list.push({ id: 'uni-assist', de: 'uni-assist-Bewerbung und Bearbeitungsentgelt', label: 'doc.uniAssist', why: 'doc.uniAssist.why', source: 'ua-fee', verified: true });
   }
   return list;
 }

@@ -421,9 +421,10 @@ function renderGlossary() {
 }
 
 function renderRuleList() {
+  const link = (u) => `<a href="${esc(u)}" rel="noopener noreferrer">${esc(u)}</a>`;
   $('rule-list').innerHTML = state.data.rules.map((r) => {
     const text = state.lang === 'zh' ? r.text_zh : r.text_en;
-    const src = r.source ? `<a href="${esc(r.source)}" rel="noopener noreferrer">${esc(r.source)}</a>` : esc(r.source_note || T('src.none'));
+    const src = r.source ? [r.source, ...(r.sources_extra || [])].map(link).join(', ') : esc(r.source_note || T('src.none'));
     return `<li><strong>${esc(r.id)}</strong>: ${esc(text)}<br>${H('lbl.source')}: ${src}${vflag(r.verified)}</li>`;
   }).join('');
 }

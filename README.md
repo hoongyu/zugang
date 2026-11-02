@@ -28,13 +28,13 @@ Lin has a 4-year bachelor's degree from China: 100-point scale, lowest pass 60, 
   - German grade **2.125** (1 + 3 × (100 − 85) / (100 − 60)), which meets 2.5.
   - **1.5** ECTS per credit (4 × 60 / 160), so mathematics comes to **30 ECTS, 6 short of 36**.
   - **APS certificate needed**: start now.
-  - uni-assist documents and payment by **2027-05-20** (8 weeks before the deadline).
+  - uni-assist application and fee ideally by **2027-05-20** (8 weeks before the deadline).
   - uni-assist fee **EUR 75** for one programme, **EUR 105** for two.
 
 ## Features
 
 - Profile form with three invented example applicants (Lin, Priya, Minh), each exercising a different path.
-- Grade conversion with the modified Bavarian formula, steps shown, with exact, cut and rounded values (no official rounding rule was found, so both are shown).
+- Grade conversion with the modified Bavarian formula, steps shown, with exact, cut and rounded values (no rounding rule for degrees was found, so both are shown).
 - ECTS estimate per subject area, clearly labelled as an estimate.
 - Requirement check against one of three invented example programmes, or requirements you type in. A missing value gives "ask the admissions office", never a guess.
 - Document checklist, back-planned timeline and official fees.
@@ -74,33 +74,34 @@ Semantic HTML with one `h1` and numbered `h2` sections; a label for every field;
 
 ## Data and sources
 
-All applicants and programmes are invented and labelled as examples. The rules come from `data/rules.json`; each has a source and a verification flag. The owner checked these sources on 2026-11-02. In the build session the source sites were blocked by the network policy, so no fact could be re-checked, and every fact the owner had marked true is shown as **partly verified** until it is re-checked.
+All applicants and programmes are invented and labelled as examples. The rules come from `data/rules.json`; each has a source and a verification flag. The owner checked these sources on 2026-11-02 before the build. The cloud build session could not reach the source sites, so it stored every fact as partly verified. A local session on the owner's laptop then re-checked each page the same day, rewrote the statements the pages did not support, and set the flags below ([build log](docs/build-log.md), "Local re-check").
 
 | Fact | Source | Status in the app |
 |---|---|---|
-| Modified Bavarian formula; result is orientation only | [TUM](https://www.tum.de/studium/bewerbung/infoportal-bewerbung/bayerische-formel), [Universität Hamburg](https://www.uni-hamburg.de/campuscenter/bewerbung/international/studium-mit-abschluss/anerkennung-auslaendischer-schulbildung/notenumrechner.html) | partial |
-| Formula does not apply to scales with only two passing grades (one university's statement) | [Universität Marburg](https://www.uni-marburg.de/de/fb02/studium/pruefungsbuero/anerkennungen/notenumrechnung-grade-conversion) | partial |
-| No official rule on cutting or rounding the converted grade | none | false: both values shown |
-| APS certificate needed for degrees from China, Vietnam, India | [TUM APS page](https://www.tum.de/en/studies/application/aps) | partial |
-| APS fees | sources disagree | false: no amount shown |
-| uni-assist fee: EUR 75 first programme, EUR 30 each additional | [uni-assist](https://uni-assist.de/en/how-to-apply/pay-all-fees/handling-fees) | partial |
-| uni-assist: submit and pay 8 weeks before the deadline; 4 to 6 weeks processing | [uni-assist](https://uni-assist.de/en/how-to-apply/plan-your-application/deadlines-processing-time) | partial |
-| 60 ECTS = one year of full-time study | ECTS Users' Guide 2015 (URL not yet verified) | partial |
-| Proportional credit conversion | Zugang's own estimate | false: labelled as an estimate |
+| Modified Bavarian formula; result is orientation only | [TUM](https://www.tum.de/studium/bewerbung/infoportal-bewerbung/bayerische-formel), [KMK agreement](https://www.kmk.org/fileadmin/Dateien/pdf/ZAB/Hochschulzugang_Beschluesse_der_KMK/GesNot05.pdf) (annex), [Universität Hamburg](https://www.uni-hamburg.de/campuscenter/bewerbung/international/studium-mit-abschluss/anerkennung-auslaendischer-schulbildung/notenumrechner.html) | verified |
+| Formula does not apply to scales with only two passing grades (one university's statement) | [Universität Marburg](https://www.uni-marburg.de/de/fb02/studium/pruefungsbuero/anerkennungen/notenumrechnung-grade-conversion) | verified |
+| Cutting or rounding the converted grade: the KMK agreement cuts after one decimal, but only for school-leaving certificates; no rule was found for degrees | [KMK agreement](https://www.kmk.org/fileadmin/Dateien/pdf/ZAB/Hochschulzugang_Beschluesse_der_KMK/GesNot05.pdf) (§ 3 (1)) | partly verified: both values shown |
+| APS certificate needed for degrees from China, Vietnam, India; not for documents from Hong Kong, Macao, Taiwan | [TUM APS page](https://www.tum.de/en/studies/application/application-info-portal/aps) | verified |
+| APS fee: published by the APS office responsible for you | [TUM APS page](https://www.tum.de/en/studies/application/application-info-portal/aps); offices for [China](https://www.aps.org.cn/zh/verfahren-und-services-deutschland/chinaverfahren), [Vietnam](https://vietnam.diplo.de/vn-de/themen/kultur/aps/1236800), [India](https://aps-india.de/) | verified: no amount shown |
+| uni-assist fee: EUR 75 first programme, EUR 30 each additional; paid in advance; refunds only in the cases the terms list | [uni-assist](https://www.uni-assist.de/en/how-to-apply/apply-online/pay-submit/), [terms § 14 and § 15](https://www.uni-assist.de/en/terms-and-conditions/) | verified |
+| uni-assist: apply ideally at least 8 weeks before the deadline; processing generally takes 4 to 6 weeks | [uni-assist](https://www.uni-assist.de/en/how-to-apply/plan-your-application/standard-procedure/) | verified |
+| 60 ECTS = a full year of study | [European Commission](https://education.ec.europa.eu/education-levels/higher-education/inclusive-and-connected-higher-education/european-credit-transfer-and-accumulation-system) | verified |
+| Proportional credit conversion | Zugang's own estimate | not verified: labelled as an estimate |
 
 ## Limitations
 
 - Rules differ by university and programme. Always check the official page of your programme.
-- The grade formula gives orientation only; universities may apply other rules (for example the ZAB's).
+- The grade formula gives orientation only; universities may apply other rules.
 - The ECTS conversion is an estimate; universities may convert by workload or their own method.
-- APS and language-test fees are not shown, because sources disagree.
-- Some facts are only partly verified (see above).
+- APS and language-test fees are not shown: the APS offices and the test providers publish them.
+- Whether the converted grade is cut or rounded is only partly verified (see above).
 - Not legal advice. Not affiliated with uni-assist, DAAD, APS or any university.
 
 ## Authorship, AI assistance and prior work
 
 - The owner, a master's student at TU Berlin, chose the problem, wrote the design together with Claude and reviews the build.
 - Claude Code (Anthropic) wrote the code and the docs in one cloud session on 2026-11-02, following [the design](docs/superpowers/specs/2026-11-02-zugang-design.md) and [the task](docs/cloud-task.md).
+- A local Claude Code session on the owner's laptop re-checked every source the same day, corrected the data and the texts, and retook the screenshots ([build log](docs/build-log.md), "Local re-check").
 - Prior work: none. The repository was created on 2026-11-02, inside the AccessED development period (2026-10-17 to 2026-11-20). The design was written a few hours before the code. There is no earlier code.
 - Libraries: none. Fonts: system fonts. Data: synthetic, plus public rules cited above.
 

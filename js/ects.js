@@ -1,4 +1,4 @@
-// ECTS estimate per subject area. 60 ECTS = one year of full-time study.
+// ECTS estimate per subject area. 60 ECTS = a full year of study (rule "ects-year").
 // Proportional conversion (years × 60 / total credits) is OUR ESTIMATE, not an official rule.
 import { roundTo } from './grade.js';
 

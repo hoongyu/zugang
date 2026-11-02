@@ -13,12 +13,12 @@ Record the browser at 1280 px width, page zoom 125% so text is readable. Serve w
 | 0:48 | Press "Check my eligibility" | One click. |
 | 0:52 | Grade card | Lin's German grade is 2.125. Lower is better, so it meets 2.5. |
 | 1:00 | Point at the calculation and the warnings | You see the formula, the numbers, and the warnings. The result is orientation only. |
-| 1:10 | Point at "cut" and "rounded" | We found no official rounding rule, so we show both values. |
+| 1:10 | Point at "cut" and "rounded" | We found no rounding rule for degrees, so we show both values. |
 | 1:18 | ECTS card | Four years are 240 ECTS. So one credit is about 1.5 ECTS. |
 | 1:26 | Mathematics card, red "Not met" | Mathematics comes to 30 ECTS. The programme wants 36. Lin is 6 short. |
 | 1:34 | Next step line | The next step: check the module handbook, or take extra courses. |
-| 1:42 | Source line with "partly verified" | Every result links its source and says how well it is verified. |
-| 1:50 | Timeline | Lin needs an APS certificate. Start now. uni-assist documents are due by 20 May 2027. |
+| 1:42 | Source line with "verified" | Every result links its source and says how well it is verified. |
+| 1:50 | Timeline | Lin needs an APS certificate. Start now. The uni-assist application should go in by 20 May 2027. |
 | 2:00 | Fees | uni-assist costs 75 euros for one programme, 105 for two. Lin knows the gap before paying. |
 | 2:10 | Press "中文" | Everything is also in Simplified Chinese. German terms stay next to the translation. |
 | 2:18 | Glossary, type "Frist" in the filter | The glossary explains 27 German admission terms. |

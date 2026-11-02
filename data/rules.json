@@ -4,74 +4,79 @@
   "rules": [
     {
       "id": "grade-formula",
-      "text_en": "Modified Bavarian formula: N = 1 + 3 × (Nmax − Nd) / (Nmax − Nmin), with Nmax the best grade, Nmin the lowest passing grade and Nd your grade. Universities describe the result as orientation only. University pages say uni-assist generally uses it, but not where the ZAB has other rules.",
-      "text_zh": "修正巴伐利亚公式（modifizierte bayerische Formel）：N = 1 + 3 × (Nmax − Nd) / (Nmax − Nmin)，其中 Nmax 为最高分，Nmin 为最低及格分，Nd 为你的成绩。各大学称结果仅供参考。大学网页说明 uni-assist 一般使用该公式，但 ZAB 另有规定时除外。",
+      "text_en": "Modified Bavarian formula: N = 1 + 3 × (Nmax − Nd) / (Nmax − Nmin), with Nmax the best grade, Nmin the lowest passing grade and Nd your grade. A KMK agreement sets it out for foreign school-leaving certificates; universities also use it to convert foreign grades and describe the result as orientation only.",
+      "text_zh": "修正巴伐利亚公式（modifizierte bayerische Formel）：N = 1 + 3 × (Nmax − Nd) / (Nmax − Nmin)，其中 Nmax 为最高分，Nmin 为最低及格分，Nd 为你的成绩。德国文教部长联席会议（KMK）的协议把它规定用于外国中学毕业证书；各大学也用它换算在国外取得的成绩，并称结果仅供参考。",
       "source": "https://www.tum.de/studium/bewerbung/infoportal-bewerbung/bayerische-formel",
       "sources_extra": [
+        "https://www.kmk.org/fileadmin/Dateien/pdf/ZAB/Hochschulzugang_Beschluesse_der_KMK/GesNot05.pdf",
         "https://www.uni-hamburg.de/campuscenter/bewerbung/international/studium-mit-abschluss/anerkennung-auslaendischer-schulbildung/notenumrechner.html"
       ],
-      "verified": "partial",
-      "checked_note": "Checked by the owner on 2026-11-02 (appendix A of docs/cloud-task.md). Re-check in the build session failed: the host was blocked by the network policy, so the flag was downgraded from true to partial."
+      "verified": true,
+      "checked_note": "Re-checked on 2026-11-02 by the owner's local session (docs/build-log.md, \"Local re-check\"). The formula is in the annex of the KMK agreement of 15.03.1991 (version of 12.09.2013); TUM and Universität Hamburg call the result orientation only. The earlier sentence that uni-assist generally uses the formula was removed: no source for it was found."
     },
     {
       "id": "grade-two-pass",
       "text_en": "The formula does not apply to grading scales with only two passing grades (as stated by one university, Philipps-Universität Marburg).",
-      "text_zh": "该公式不适用于只有两个及格等级的评分体系（这是一所大学——马尔堡大学——的说法）。",
+      "text_zh": "该公式不适用于只有两个及格等级的评分体系（此说法来自一所大学：马尔堡大学）。",
       "source": "https://www.uni-marburg.de/de/fb02/studium/pruefungsbuero/anerkennungen/notenumrechnung-grade-conversion",
-      "verified": "partial",
-      "checked_note": "Checked by the owner on 2026-11-02 (appendix A of docs/cloud-task.md). Re-check in the build session failed: the host was blocked by the network policy, so the flag was downgraded from true to partial."
+      "verified": true,
+      "checked_note": "Re-checked on 2026-11-02 by the owner's local session (docs/build-log.md, \"Local re-check\"). The Marburg page lists this under \"Ausnahmen\"."
     },
     {
       "id": "grade-rounding",
-      "text_en": "No official rule was found on whether the converted grade is cut or rounded after one decimal. Zugang shows both values.",
-      "text_zh": "未找到关于换算成绩保留一位小数时应截断还是四舍五入的官方规定。Zugang 同时显示两种结果。",
-      "source": null,
-      "verified": false,
-      "checked_note": "No source exists; shown as an open question."
+      "text_en": "For foreign school-leaving certificates, the KMK agreement determines the converted grade to one decimal without rounding (the value is cut). No such rule was found for degrees used in a master's application, so Zugang shows both values.",
+      "text_zh": "对外国中学毕业证书，KMK 协议规定换算成绩保留一位小数且不四舍五入（即截断）。对申请硕士所用的学位，未找到这样的规定，因此 Zugang 同时显示两种结果。",
+      "source": "https://www.kmk.org/fileadmin/Dateien/pdf/ZAB/Hochschulzugang_Beschluesse_der_KMK/GesNot05.pdf",
+      "verified": "partial",
+      "checked_note": "Re-checked on 2026-11-02 by the owner's local session (docs/build-log.md, \"Local re-check\"). § 3 (1) of the KMK agreement: one decimal, not rounded. The agreement covers school-leaving certificates, not degrees, so the flag is partial and the app keeps both values."
     },
     {
       "id": "aps-countries",
-      "text_en": "An APS certificate (Akademische Prüfstelle) is required for a master's application when the qualifying degree was obtained in China, Vietnam or India.",
-      "text_zh": "若取得申请硕士所需学位的国家为中国、越南或印度，申请硕士时需要 APS 证书（Akademische Prüfstelle，留德人员审核部）。",
-      "source": "https://www.tum.de/en/studies/application/aps",
-      "verified": "partial",
-      "checked_note": "Checked by the owner on 2026-11-02 (appendix A of docs/cloud-task.md). Re-check in the build session failed: the host was blocked by the network policy, so the flag was downgraded from true to partial. Some third-party sources add Mongolia; that is unverified and not part of the rule."
+      "text_en": "An APS certificate (Akademische Prüfstelle) is required for a master's application when the qualifying degree was obtained in China, Vietnam or India. Applicants with documents from Hong Kong, Macao and Taiwan do not need one.",
+      "text_zh": "若取得申请硕士所需学位的国家为中国、越南或印度，申请硕士时需要 APS 证书（Akademische Prüfstelle，留德人员审核部）。持香港、澳门、台湾文凭的申请人不需要。",
+      "source": "https://www.tum.de/en/studies/application/application-info-portal/aps",
+      "verified": true,
+      "checked_note": "Re-checked on 2026-11-02 by the owner's local session (docs/build-log.md, \"Local re-check\"). The old TUM URL redirects to the one above. Some third-party sources add Mongolia; that is unverified and not part of the rule."
     },
     {
       "id": "aps-fees",
-      "text_en": "APS fees differ between sources, so Zugang shows no amount. Check the fee on the official APS website for your country (linked from the TUM APS page).",
-      "text_zh": "不同来源的 APS 费用说法不一，因此 Zugang 不显示金额。请在你所在国家的 APS 官方网站上查询（可从慕尼黑工业大学的 APS 页面找到链接）。",
-      "source": "https://www.tum.de/en/studies/application/aps",
-      "verified": false,
-      "checked_note": "Sources conflict (for China, third parties quote RMB 2,500). The official APS site URLs could not be verified in the build session, so only the TUM page is linked."
+      "text_en": "Zugang shows no APS fee. The TUM APS page gives no amount and says it is published by the APS office responsible for you: China (aps.org.cn), Vietnam (APS Hanoi) or India (APS New Delhi).",
+      "text_zh": "Zugang 不显示 APS 费用。慕尼黑工业大学的 APS 页面没有写金额，说明以负责你的 APS 审核部网站为准：中国（aps.org.cn）、越南（河内 APS）或印度（新德里 APS）。",
+      "source": "https://www.tum.de/en/studies/application/application-info-portal/aps",
+      "sources_extra": [
+        "https://www.aps.org.cn/zh/verfahren-und-services-deutschland/chinaverfahren",
+        "https://vietnam.diplo.de/vn-de/themen/kultur/aps/1236800",
+        "https://aps-india.de/"
+      ],
+      "verified": true,
+      "checked_note": "Re-checked on 2026-11-02 by the owner's local session (docs/build-log.md, \"Local re-check\"). The three office links are the ones the TUM page gives. Third-party fee figures are not used."
     },
     {
       "id": "ua-fee",
-      "text_en": "uni-assist handling fee (Bearbeitungsentgelt): EUR 75 for the first chosen programme, EUR 30 for each additional one in the same application semester. The fees cover processing, whatever the result of the evaluation.",
-      "text_zh": "uni-assist 处理费（Bearbeitungsentgelt）：同一申请学期第一个专业 75 欧元，每增加一个专业 30 欧元。无论审核结果如何，费用都用于处理申请，不予退还。",
-      "source": "https://uni-assist.de/en/how-to-apply/pay-all-fees/handling-fees",
+      "text_en": "uni-assist handling fee (Bearbeitungsentgelt): EUR 75 for the first chosen programme, EUR 30 for each additional one in the same application semester. Fees are paid in advance, and processing starts only once the payment has arrived. The terms list refunds only for overpayment, fees the university pays, or withdrawal before the evaluation result.",
+      "text_zh": "uni-assist 处理费（Bearbeitungsentgelt）：同一申请学期第一个专业 75 欧元，每增加一个专业 30 欧元。费用须预付，款项到账后才开始处理。条款只在多付、费用本应由大学承担、或在审核结果确定前撤回申请时退款。",
+      "source": "https://www.uni-assist.de/en/how-to-apply/apply-online/pay-submit/",
       "sources_extra": [
-        "https://uni-assist.de/en/faqs/pay-all-fees/"
+        "https://www.uni-assist.de/en/terms-and-conditions/"
       ],
-      "verified": "partial",
-      "checked_note": "Checked by the owner on 2026-11-02 (appendix A of docs/cloud-task.md). Re-check in the build session failed: the host was blocked by the network policy, so the flag was downgraded from true to partial."
+      "verified": true,
+      "checked_note": "Re-checked on 2026-11-02 by the owner's local session (docs/build-log.md, \"Local re-check\"). Amounts on the pay-and-submit page (the old handling-fees URL redirects there); payment in advance in § 15 and refund cases in § 14 of the terms and conditions. The old FAQ link returns 404 and was removed."
     },
     {
       "id": "ua-timing",
-      "text_en": "uni-assist: submit and pay at least 8 weeks before the deadline. Processing takes 4 to 6 weeks from receipt of the online application; applications are handled in order of arrival.",
-      "text_zh": "uni-assist：至少在截止日期前 8 周提交材料并付款。自收到在线申请起，处理需要 4 至 6 周；按到达顺序处理。",
-      "source": "https://uni-assist.de/en/how-to-apply/plan-your-application/deadlines-processing-time",
-      "verified": "partial",
-      "checked_note": "Checked by the owner on 2026-11-02 (appendix A of docs/cloud-task.md). Re-check in the build session failed: the host was blocked by the network policy, so the flag was downgraded from true to partial."
+      "text_en": "uni-assist: apply as early as possible, ideally at least 8 weeks before the deadline. Processing generally takes 4 to 6 weeks after you submit the online application form (standard procedure).",
+      "text_zh": "uni-assist：尽早申请，最好至少在截止日期前 8 周。提交在线申请表后，标准程序的处理一般需要 4 至 6 周。",
+      "source": "https://www.uni-assist.de/en/how-to-apply/plan-your-application/standard-procedure/",
+      "verified": true,
+      "checked_note": "Re-checked on 2026-11-02 by the owner's local session (docs/build-log.md, \"Local re-check\"). The old deadlines page returns 404; both statements are on the standard-procedure page. \"Handled in order of arrival\" was dropped because the current page does not say it."
     },
     {
       "id": "ects-year",
-      "text_en": "60 ECTS credits (Leistungspunkte) correspond to one year of full-time study; one credit corresponds to 25 to 30 hours of work (ECTS Users' Guide 2015, European Commission).",
-      "text_zh": "60 个 ECTS 学分（Leistungspunkte）相当于一年全日制学习；1 个学分相当于 25 至 30 小时的学习量（欧盟委员会《ECTS 用户指南》2015）。",
-      "source": null,
-      "source_note": "ECTS Users' Guide 2015 (European Commission). The official URL could not be found and verified in the build session.",
-      "verified": "partial",
-      "checked_note": "Status partial until the official URL is verified (appendix A)."
+      "text_en": "60 ECTS credits (Leistungspunkte) are the equivalent of a full year of study or work (European Commission).",
+      "text_zh": "60 个 ECTS 学分（Leistungspunkte）相当于一整年的学习或工作量（欧盟委员会）。",
+      "source": "https://education.ec.europa.eu/education-levels/higher-education/inclusive-and-connected-higher-education/european-credit-transfer-and-accumulation-system",
+      "verified": true,
+      "checked_note": "Re-checked on 2026-11-02 by the owner's local session (docs/build-log.md, \"Local re-check\"). Stated on the European Commission's ECTS page. \"25 to 30 hours per credit\" (ECTS Users' Guide 2015) was dropped: the guide was not re-checked."
     },
     {
       "id": "ects-estimate",

@@ -1,5 +1,5 @@
 // Back-planning from the application deadline (Bewerbungsfrist).
-// uni-assist: submit documents and pay at least 8 weeks before the deadline (rule "ua-timing").
+// uni-assist: apply and pay ideally at least 8 weeks before the deadline (rule "ua-timing").
 
 export const UA_WEEKS_BEFORE = 8;
 

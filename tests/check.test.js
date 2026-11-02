@@ -73,7 +73,7 @@ test('missing profile values give unknown, never a guess', () => {
   assert.equal(res.find((x) => x.id === 'ects-mathematics').status, 'unknown');
 });
 
-test('a grade between cut and rounded thresholds is unknown (no official rounding rule)', () => {
+test('a grade between cut and rounded thresholds is unknown (no rounding rule for degrees)', () => {
   // exact 2.455 -> cut 2.4, rounded 2.5; with min 2.4 the outcome depends on rounding
   const p = { ...lin, grade: { nMax: 100, nMin: 60, nD: 80.6 } };
   const r = checkProgramme(p, { ...ds, minGrade: 2.4 }).find((x) => x.id === 'grade');

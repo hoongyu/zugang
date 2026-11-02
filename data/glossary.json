@@ -43,8 +43,8 @@
       "zh": "留德人员审核部（APS）",
       "explain_en": "Office that checks degrees from China, India and Vietnam and issues the APS certificate needed before a master's application.",
       "explain_zh": "审核来自中国、印度和越南的学历并签发 APS 证书的机构，申请硕士前需要该证书。",
-      "source": "https://www.tum.de/en/studies/application/aps",
-      "verified": "partial"
+      "source": "https://www.tum.de/en/studies/application/application-info-portal/aps",
+      "verified": true
     },
     {
       "de": "beglaubigte Kopie",
@@ -68,10 +68,10 @@
       "de": "Leistungspunkte (LP)",
       "en": "credit points (ECTS)",
       "zh": "学分（ECTS）",
-      "explain_en": "Credits that measure workload; 60 ECTS correspond to one year of full-time study.",
-      "explain_zh": "衡量学习量的学分；60 个 ECTS 学分相当于一年全日制学习。",
-      "source": null,
-      "verified": "partial"
+      "explain_en": "Credits that represent learning and its workload; 60 ECTS credits are the equivalent of a full year of study or work.",
+      "explain_zh": "表示学习成果及相应学习量的学分；60 个 ECTS 学分相当于一整年的学习或工作量。",
+      "source": "https://education.ec.europa.eu/education-levels/higher-education/inclusive-and-connected-higher-education/european-credit-transfer-and-accumulation-system",
+      "verified": true
     },
     {
       "de": "Notenumrechnung",
@@ -80,7 +80,7 @@
       "explain_en": "Converting a foreign grade to the German scale from 1.0 (best) to 4.0 (lowest pass), usually with the modified Bavarian formula.",
       "explain_zh": "把外国成绩换算成德国的 1.0（最好）到 4.0（最低及格）分制，通常使用修正巴伐利亚公式。",
       "source": "https://www.tum.de/studium/bewerbung/infoportal-bewerbung/bayerische-formel",
-      "verified": "partial"
+      "verified": true
     },
     {
       "de": "Auflage",
@@ -230,19 +230,19 @@
       "de": "uni-assist",
       "en": "uni-assist (application service)",
       "zh": "uni-assist（国际学生申请服务处）",
-      "explain_en": "A service that checks international applications for many German universities and charges a handling fee.",
-      "explain_zh": "为许多德国大学审核国际学生申请并收取处理费的服务机构。",
-      "source": "https://uni-assist.de/en/how-to-apply/pay-all-fees/handling-fees",
-      "verified": "partial"
+      "explain_en": "A service that processes and evaluates application documents for the universities that use it, and charges a handling fee.",
+      "explain_zh": "为使用它的大学处理和审核申请材料并收取处理费的服务机构。",
+      "source": "https://www.uni-assist.de/en/how-to-apply/apply-online/pay-submit/",
+      "verified": true
     },
     {
       "de": "Bearbeitungsentgelt",
       "en": "handling fee",
       "zh": "处理费",
-      "explain_en": "The fee uni-assist charges for processing an application, whatever the result.",
-      "explain_zh": "uni-assist 处理申请所收的费用，与结果无关。",
-      "source": "https://uni-assist.de/en/how-to-apply/pay-all-fees/handling-fees",
-      "verified": "partial"
+      "explain_en": "The fee uni-assist charges for processing and evaluating your documents.",
+      "explain_zh": "uni-assist 处理和审核你的申请材料所收的费用。",
+      "source": "https://www.uni-assist.de/en/how-to-apply/apply-online/pay-submit/",
+      "verified": true
     }
   ]
 }
