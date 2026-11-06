@@ -1,15 +1,35 @@
-# Devpost submission for LaunchPad Hacks (draft)
+# LaunchPad Hacks: Devpost paste sheet for Zugang
 
-How to use: paste each section into the matching Devpost field; the sections from Inspiration to What's next go together into "About the project". This is the LaunchPad version of `docs/submission.md` (AccessED Hacks). LaunchPad asks every page to explain the problem, the solution, the technologies, the contributions and the limitations, and to separate the work done during the event from pre-existing work; each has its own section below. The four judging criteria weigh equally: Innovation & Originality, Usefulness & Impact, Implementation & Functionality, Design & Presentation (which includes accessibility).
+Every field of the Devpost project form, in the order the form shows it, with the final text. Copy the text inside each box exactly as it is; "About the project" is Markdown, which Devpost renders. This is the LaunchPad version of `docs/submission.md` (AccessED Hacks). Wohin is a separate entry with its own sheet.
 
-Deadline: 2026-11-20 17:00 Eastern Time (23:00 CET), one entry per project. Required: a working demo link, build or recorded walkthrough with setup steps, and screenshots. A video of 2 to 3 minutes is optional; the script is `docs/walkthrough.md`. Keep every link working until 25 November.
+- **Submit this one only after Zugang is public.** Once the owner agrees, the project window merges `mvp`, makes the repository public, turns on GitHub Pages and checks that the demo link below opens. Until then judges could open neither the code nor the demo.
+- **Deadline:** 2026-11-20 17:00 Eastern Time (23:00 CET). One entry per project.
+- **Required by the rules:** a working demo link, a build or recorded walkthrough with setup steps, and screenshots. All three are below. A video of 2 to 3 minutes is optional; if the AccessED video (script `docs/walkthrough.md`) is recorded in time, its link can go here too.
+- **Judging (equal weight):** Innovation & Originality, Usefulness & Impact, Implementation & Functionality, Design & Presentation (which includes accessibility). Judging runs from 21 to 25 November, so every link must keep working until then.
+- **Order:** join the hackathon on Devpost, start a project, fill in steps 1 to 3, check step 4, submit.
+- If anything is added to Zugang before submitting, add it to the table in "Built during LaunchPad Hacks".
 
-Before submitting: the repository is private, so judges cannot open it yet. Make it public and turn on GitHub Pages (README, "Deploying to GitHub Pages"), the same step AccessED needs, then fill in the two places marked [DEMO LINK]. If anything is added to Zugang before submitting, add it to the table in "Built during LaunchPad Hacks". The last line of "Disclosure" assumes Zugang is also submitted to AccessED; change it if not.
+## Step 1: Project overview
 
-**Project name**: Zugang
+**Project name**
 
-**Elevator pitch**: A free, offline self-check for German master's admission that shows the rule, the calculation and the source behind every answer, in English and Chinese.
+```text
+Zugang
+```
 
+**Elevator pitch** (153 of 200 characters)
+
+```text
+A free, offline self-check for German master's admission that shows the rule, the calculation and the source behind every answer, in English and Chinese.
+```
+
+**Thumbnail:** upload `docs/img/devpost-thumbnail.png` (3:2).
+
+## Step 2: Project details
+
+**About the project**
+
+````markdown
 ## Inspiration
 
 Applying to a German master's programme from abroad means piecing together grade conversion, ECTS credits per subject, the APS certificate and uni-assist fees and deadlines from many official pages, mostly in German. Many applicants pay an agency, or pay uni-assist fees for programmes they never qualified for. The information is public; what is missing is a tool that applies it to your own case and explains why.
@@ -39,7 +59,7 @@ International students preparing to apply for a master's programme in Germany, e
 
 ## How we built it
 
-A static page: HTML, CSS and plain JavaScript modules, with no libraries, no server and no network calls. The rules are pure functions (`grade.js`, `ects.js`, `check.js`, `checklist.js`, `timeline.js`, `fees.js`); the facts live in JSON with a source URL and a verification flag each. 39 tests run with Node's built-in test runner. The interface is in English and Simplified Chinese, and German terms carry a German `lang` attribute so screen readers pronounce them correctly.
+A static page: HTML, CSS and plain JavaScript modules, with no libraries, no server and no network calls. The rules are pure functions (`grade.js`, `ects.js`, `check.js`, `checklist.js`, `timeline.js`, `fees.js`); the facts live in JSON with a source URL and a verification flag each. 39 tests run with Node's built-in test runner. The interface is in English and Simplified Chinese, and German terms carry a German `lang` attribute so screen readers pronounce them correctly. Playwright was used only for checks and screenshots; it is not part of the app.
 
 ## Built during LaunchPad Hacks
 
@@ -89,29 +109,22 @@ Pre-existing work by others: only the public official pages that the rules cite.
 - More languages (Vietnamese, Hindi) and more glossary terms, reviewed by native speakers.
 - Re-checking the sources before each application cycle, since fees and processing times change.
 
-## Built with
-
-html, css, javascript, json, node.js, playwright (checks and screenshots only, not part of the app)
-
 ## Try it out
 
-- Live demo: [DEMO LINK: https://hoongyu.github.io/zugang/ after GitHub Pages is on]. Add `?example=lin`, `?example=priya` or `?example=minh` to open straight on an example's results.
-- Source: https://github.com/hoongyu/zugang (must be public before submitting)
-- Run locally (a browser, plus Python 3 only to serve the files):
+- Live demo: https://hoongyu.github.io/zugang/ (add `?example=lin`, `?example=priya` or `?example=minh` to open straight on an example's results)
+- Source code: https://github.com/hoongyu/zugang
 
-  ```
-  git clone https://github.com/hoongyu/zugang.git
-  cd zugang
-  python3 -m http.server 8000
-  ```
+## Run it locally
 
-  Then open http://localhost:8000/ . Tests: `node --test` (Node 18 or later, no dependencies).
-- Video (optional): the YouTube or Vimeo link, if recorded
+A browser, plus Python 3 only to serve the files:
 
-## Images
+```
+git clone https://github.com/hoongyu/zugang.git
+cd zugang
+python3 -m http.server 8000
+```
 
-- Thumbnail (3:2): `docs/img/devpost-thumbnail.png`
-- Gallery: `docs/img/lin-results-en.png`, `docs/img/lin-results-zh.png`, `docs/img/form-en.png`, `docs/img/glossary.png`, `docs/img/mobile-390.png`
+Then open http://localhost:8000/ . Tests: `node --test` (Node 18 or later, no dependencies).
 
 ## Contributions
 
@@ -123,4 +136,45 @@ Solo entry. The owner, hoongyu, a master's student at TU Berlin, chose the probl
 - **Data**: synthetic. All applicants and programmes are invented and labelled as examples. The rules cite public official pages (listed in the README).
 - **Assets**: none besides our own screenshots; system fonts only.
 - **AI assistance**: as described under "Contributions".
-- **Other hackathons**: Zugang was built for AccessED Hacks 2026 and is entered there too. This is its only LaunchPad entry.
+- **Other hackathons**: Zugang was built for AccessED Hacks 2026 and is also entered there. This is its only LaunchPad entry.
+````
+
+**Built with** (paste; each comma-separated word becomes a tag)
+
+```text
+html, css, javascript, json, node.js, playwright
+```
+
+**"Try it out" links** (one per field)
+
+```text
+https://hoongyu.github.io/zugang/
+```
+
+```text
+https://github.com/hoongyu/zugang
+```
+
+**Image gallery:** upload these from `docs/img/`, in this order: `lin-results-en.png`, `lin-results-zh.png`, `form-en.png`, `glossary.png`, `mobile-390.png`.
+
+**Video demo link:** optional. Paste the AccessED video link if it is recorded in time; otherwise leave it empty.
+
+## Step 3: Additional questions
+
+The form may add questions of its own. These answers are ready:
+
+| If it asks | Answer |
+|---|---|
+| Team members | Solo; nobody to invite |
+| Student status | Master's student at TU Berlin |
+| Built during the hackathon? | Yes: designed and built on 2 November 2026; the git history shows every step |
+| AI tools used | Claude Code (Anthropic) wrote the code and the docs, and a second Claude Code session re-checked every source; the owner chose the problem, co-wrote the design and reviewed the build |
+| Entered in other hackathons? | AccessED Hacks 2026, which it was built for |
+
+## Step 4: Before pressing Submit
+
+- [ ] https://hoongyu.github.io/zugang/ opens, and `?example=lin` shows Lin's results (the project window checks this as soon as GitHub Pages is on).
+- [ ] The repository opens in a private browser window.
+- [ ] The thumbnail and all five gallery images are uploaded.
+- [ ] If a video link was added, it plays.
+- [ ] Zugang is also submitted to AccessED Hacks; if it is not, delete the last line of "Disclosure".
