@@ -84,7 +84,7 @@ Rules differ by university; the grade formula gives orientation only; the ECTS c
 - **Libraries**: none.
 - **Data**: synthetic. All applicants and programmes are invented and labelled as examples. Rules cite public official pages (listed in the README).
 - **Assets**: none besides our own screenshots; system fonts only.
-- **AI assistance**: the owner, a master's student at TU Berlin, chose the problem, wrote the design together with Claude and reviews the build. Claude Code wrote the code and the docs in one cloud session; a local Claude Code session re-checked the sources the same day.
+- **AI assistance**: the owner, a master's student at TU Berlin, chose the problem, wrote the design together with Claude and reviews the build. Claude Code wrote the code and the docs in one cloud session; a local Claude Code session re-checked the sources the same day. The demo video was scripted and recorded by Claude Code from the running app; its narration is an AI voice generated with ElevenLabs.
 - **Prior work**: none. The first commit was made on 2026-11-02, inside the development period. The design was written a few hours before the code.
 
 ## Links
