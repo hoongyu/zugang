@@ -8,6 +8,8 @@
 
 Built for AccessED Hacks 2026. Main track: **Afford**. Also serves **Understand**.
 
+**Live demo:** https://hoongyu.github.io/zugang/ (add `?example=lin` to open straight on Lin's results)
+
 ![Lin's results in English](docs/img/lin-results-en.png)
 
 ## The barrier, and who it is for
@@ -102,7 +104,7 @@ All applicants and programmes are invented and labelled as examples. The rules c
 - The owner, a master's student at TU Berlin, chose the problem, wrote the design together with Claude and reviews the build.
 - Claude Code (Anthropic) wrote the code and the docs in one cloud session on 2026-11-02, following [the design](docs/superpowers/specs/2026-11-02-zugang-design.md) and [the task](docs/cloud-task.md).
 - A local Claude Code session on the owner's laptop re-checked every source the same day, corrected the data and the texts, and retook the screenshots ([build log](docs/build-log.md), "Local re-check").
-- Prior work: none. The repository was created on 2026-11-02, inside the AccessED development period (2026-10-17 to 2026-11-20). The design was written a few hours before the code. There is no earlier code.
+- Prior work: none. The first commit was made on 2026-11-02, inside the AccessED development period (2026-10-17 to 2026-11-20). The design was written a few hours before the code. There is no earlier code.
 - Libraries: none. Fonts: system fonts. Data: synthetic, plus public rules cited above.
 
 ## Licence

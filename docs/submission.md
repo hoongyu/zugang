@@ -71,7 +71,7 @@ Lin (an invented applicant) has a 4-year degree from China: 100-point scale, low
 
 ## Try it
 
-- Live demo: [DEMO LINK: owner to add after deploying]
+- Live demo: https://hoongyu.github.io/zugang/ (add `?example=lin` to open straight on Lin's results)
 - Run locally: `git clone https://github.com/hoongyu/zugang.git`, `cd zugang`, `python3 -m http.server 8000`, open http://localhost:8000/ . Add `?example=lin` to open on Lin's results.
 - Tests: `node --test` (Node 18 or later).
 
@@ -85,10 +85,10 @@ Rules differ by university; the grade formula gives orientation only; the ECTS c
 - **Data**: synthetic. All applicants and programmes are invented and labelled as examples. Rules cite public official pages (listed in the README).
 - **Assets**: none besides our own screenshots; system fonts only.
 - **AI assistance**: the owner, a master's student at TU Berlin, chose the problem, wrote the design together with Claude and reviews the build. Claude Code wrote the code and the docs in one cloud session; a local Claude Code session re-checked the sources the same day.
-- **Prior work**: none. The repository was created on 2026-11-02, inside the development period. The design was written a few hours before the code.
+- **Prior work**: none. The first commit was made on 2026-11-02, inside the development period. The design was written a few hours before the code.
 
 ## Links
 
 - Source: https://github.com/hoongyu/zugang
-- Demo: [DEMO LINK: owner to add]
+- Demo: https://hoongyu.github.io/zugang/
 - Video: [VIDEO LINK: owner to add]
